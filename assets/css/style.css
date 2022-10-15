@@ -61,11 +61,11 @@ header{width:100%;background:#fff;min-height:100px;display:flex;align-items:cent
 .h-navigaion ul{display:flex}
 .h-navigaion li{font-size:14px;color:#333;margin:0 6px}
 .h-navigaion li a{color:#333}
-.main{height:calc(100vh - 172px);width:100%}
+.main{height:100%;width:100%}
 .m-row{display:flex;align-items:flex-start;justify-content:flex-end;flex-wrap: wrap;}
-.left-side-box{position:absolute;width:53%;background:#f8ae27;height:100%;top:0;left:0;border-radius:0 40px 0 0;display:flex;align-items:center;justify-content:flex-end}
+.left-side-box{position:absolute;width:53%;background:#f8ae27;height:auto;top:0;left:0;border-radius:0 40px 0 0;display:flex;align-items:center;justify-content:flex-end}
 .right-side-box{width: 40%;padding: 54px 1%;}
-.login-wrapper{height:inherit;display: flex;align-items: center;justify-content: center}
+.login-wrapper{height:inherit;display: flex;align-items: center;justify-content: center;min-height: 635px;}
 .form-control{display:block;width:100%;height:46px;font-weight:400;line-height:1.5;color:#333;border-radius:40px;background:#fff;border:1px solid #c3c3c3;padding:8px 14px;outline:0}
 .form-control:focus,.form-control:hover{border:1px solid #c3c3c3}
 .form-box h3{font-size:28px;margin-bottom:14px;font-weight:500}
@@ -88,7 +88,7 @@ p{font-size:14px;color:#333;margin-bottom:12px}
 .btn-grp{display:flex;align-items:center;justify-content:space-between}
 .btn-grp .btn{margin:0 8px;background: transparent;border:1px solid #c3c3c3;padding:14px 14px;border-radius:40px;max-width:172px;width:100%;color:#000;font-weight:600;cursor:pointer;-webkit-transition:.3s all ease;-o-transition:.3s all ease;transition:.3s all ease}
 .btn-grp .btn:hover{background:#f8ae27;border:1px solid #f8ae27}
-.left-side-inner{width:100%;height:100%;max-width:630px;display: flex;flex-direction: column;justify-content: center;}
+.left-side-inner{width:100%;height:100%;max-width:630px;display: flex;flex-direction: column;justify-content: center;padding: 17px 0px 40px;}
 .heading{font-size:40px;color:#000;font-weight:700;margin:20px 0;line-height:46px;text-align:center;padding:0 30px}
 .heading span{font-weight:500;display:block;color:#000}
 .big-slider .item{background:#fff;padding:30px;border-radius:20px}
@@ -122,12 +122,17 @@ footer a{font-size:14px;color:#333}
 .f-tw-icon{width:20px;height:18px;background-position:-136px -115px}
 .f-inst-icon{width:20px;height:20px;background-position:-140px -66px}
 .f-yt-icon{width:22px;height:18px;background-position:-136px -158px}
-ul.toggle {
-    display: none;
+ul.toggle {display: none;}
+@media screen and (min-width: 1600px) {
+    .main{height: calc(100vh - 172px);}
+    .left-side-box{height: 100%;}
+    .left-side-inner{padding: 0;}
+    .login-wrapper{min-height: auto;}
 }
 @media screen and (max-width:1024px){    
     .heading{font-size: 34px;line-height: 34px;}
     .right-side-box{width: 44%;}
+    
 }
 @media screen and (max-width:991px){
     .bottom-section{flex-direction: column;}
